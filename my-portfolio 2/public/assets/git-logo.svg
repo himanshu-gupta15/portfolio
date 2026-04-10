@@ -1,0 +1,15 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#1A0808" stroke="#F05032" stroke-width="2.5"/>
+  <!-- Commit node left -->
+  <circle cx="22" cy="20" r="5" fill="#F05032"/>
+  <!-- Commit node bottom left -->
+  <circle cx="22" cy="48" r="5" fill="#F05032"/>
+  <!-- Commit node right (branch) -->
+  <circle cx="42" cy="36" r="5" fill="#F05032"/>
+  <!-- Main vertical line -->
+  <line x1="22" y1="25" x2="22" y2="43" stroke="#F05032" stroke-width="3" stroke-linecap="round"/>
+  <!-- Branch line from main to right -->
+  <path d="M22 26 C22 34 34 32 42 31" stroke="#F05032" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <!-- Right branch short line down -->
+  <line x1="42" y1="31" x2="42" y2="31" stroke="#F05032" stroke-width="3" stroke-linecap="round"/>
+</svg>

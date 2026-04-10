@@ -1,0 +1,15 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#081425" stroke="#264DE4" stroke-width="2.5"/>
+  <!-- CSS3 shield -->
+  <path d="M15 11L18 47L32 51L46 47L49 11Z" fill="#264DE4"/>
+  <path d="M32 48.5L44 45.5L46.5 14L32 14Z" fill="#2965F1"/>
+  <!-- Top bar -->
+  <path d="M23 19L24 24L32 24L32 19Z" fill="white"/>
+  <path d="M32 19L32 24L40 24L41 19Z" fill="#D8E8FF"/>
+  <!-- Middle section left only (CSS asymmetry) -->
+  <path d="M24.5 28L25 33L32 33L32 28Z" fill="white"/>
+  <path d="M32 28L32 33L39.5 33L40 28Z" fill="#D8E8FF"/>
+  <!-- Bottom section -->
+  <path d="M25 37L25.8 43L32 45L32 37Z" fill="white"/>
+  <path d="M32 37L32 45L38.2 43L39 37Z" fill="#D8E8FF"/>
+</svg>

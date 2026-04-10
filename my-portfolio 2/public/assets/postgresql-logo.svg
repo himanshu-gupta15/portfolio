@@ -1,0 +1,15 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#0D1F33" stroke="#336791" stroke-width="2.5"/>
+  <!-- Elephant head body -->
+  <ellipse cx="33" cy="28" rx="13" ry="15" fill="#336791"/>
+  <!-- Ear on left -->
+  <path d="M20 20 Q12 18 13 30 Q14 38 22 34" fill="#264D73"/>
+  <!-- Elephant inner face highlight -->
+  <ellipse cx="33" cy="28" rx="9" ry="11" fill="#4882AA" opacity="0.5"/>
+  <!-- Tusks -->
+  <path d="M27 40 Q24 48 21 51" stroke="#F0EBD8" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <path d="M39 40 Q42 48 45 51" stroke="#F0EBD8" stroke-width="3" stroke-linecap="round" fill="none"/>
+  <!-- Eyes -->
+  <circle cx="28" cy="24" r="2.5" fill="white"/>
+  <circle cx="28" cy="24" r="1.5" fill="#1a2a3a"/>
+</svg>

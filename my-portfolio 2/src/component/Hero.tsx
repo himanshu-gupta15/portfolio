@@ -1,0 +1,140 @@
+// import Image from "next/image";
+
+// export default function Hero() {
+//   return (
+//     /* Background set to near-black with a subtle radial gradient for depth */
+//     <div className="bg-[#0a0a0a] min-h-screen w-full flex items-center relative overflow-hidden">
+      
+//       {/* Optional: Subtle Background Glow to match your brand colors */}
+//       <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-[#00FFFF] opacity-5 blur-[120px] rounded-full"></div>
+//       <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-[#FF00FF] opacity-5 blur-[120px] rounded-full"></div>
+
+//       <section className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-6 py-20 items-center">
+
+//         {/* Left Column: Profile AND Logo */}
+//         <div className="flex flex-col items-center justify-center gap-6">
+//           <div className="relative p-1 rounded-2xl bg-linear-to-b from-gray-800 to-transparent">
+//             <Image
+//               src="/profile.png"
+//               alt="Profile"
+//               width={420}
+//               height={420}
+//               className="rounded-xl shadow-2xl"
+//               priority
+//             />
+//           </div>
+          
+//           <div className="relative group">
+//             {/* Subtle glow behind the logo */}
+//             <div className="absolute inset-0 bg-[#00FFFF] opacity-20 blur-2xl group-hover:opacity-40 transition-opacity"></div>
+//             <Image
+//               src="/logo.png"
+//               alt="Synapticraft Logo"
+//               height={220}
+//               width={220}
+//               className="relative rounded-full object-cover border border-gray-800"
+//               priority
+//             />
+//           </div>
+//         </div>
+
+//         {/* Right Content */}
+//         <div className="text-white">
+//           <h1 className="text-4xl md:text-7xl font-extrabold leading-tight tracking-tight">
+//             Turning Vision Into Reality With{" "}
+//             <span className="text-[#00FFFF] drop-shadow-[0_0_15px_rgba(0,255,255,0.4)]">Code</span> And{" "}
+//             <span className="text-[#FF00FF] drop-shadow-[0_0_15px_rgba(255,0,255,0.4)]">Design</span>.
+//           </h1>
+
+//           <p className="mt-8 text-gray-400 text-lg md:text-xl max-w-xl leading-relaxed">
+//             As a skilled web developer, I am dedicated to turning ideas into
+//             innovative web applications. Explore my latest projects.
+//           </p>
+
+//           {/* Buttons */}
+//           <div className="mt-10 flex gap-6">
+//             <a
+//               href="/resume.pdf"
+//               className="px-8 py-4 bg-white text-black rounded-full font-bold text-lg hover:bg-[#00FFFF] transition-all duration-300 shadow-lg shadow-white/5"
+//             >
+//               Resume ↗
+//             </a>
+
+//             <a
+//               href="/contact"
+//               className="px-10 py-4 rounded-full font-bold text-xl transition-all hover:scale-105 active:scale-95 bg-gradient-to-r from-[#FF00FF] to-[#00FFFF] text-white"
+          
+//             >
+//               Contact
+//             </a>
+//           </div>
+//         </div>
+//       </section>
+//     </div>
+//   );
+// }
+
+
+
+"use client";
+import Image from "next/image";
+import ThreeScene from "./ThreeScene";
+import Galaxy from "./Galaxy";
+
+export default function Hero() {
+  return (
+    <div className="bg-[#0a0a0a] min-h-screen w-full flex items-center relative overflow-hidden">
+      
+      {/* 1. 3D MODEL BACKGROUND */}
+      <ThreeScene />
+
+      {/* 1.5 GALAXY ANIMATION */}
+      <Galaxy
+        numStars={760}
+        numTwinkles={170}
+        speed={4.2}
+        trailAlpha={0.24}
+        twinkleSpeed={0.012}
+        colors={["#ffffff", "#8be9fd", "#00ffff", "#ff7be5", "#b79cff"]}
+        className="opacity-75"
+      />
+
+      {/* 2. ATMOSPHERIC OVERLAY */}
+      <div className="absolute inset-0 z-2 bg-[radial-gradient(circle_at_center,transparent_10%,#0a0a0a_95%)] pointer-events-none" />
+
+      {/* 3. HERO CONTENT */}
+      <section className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-6 py-20 items-center">
+        
+        {/* Left Column: Profile & Hire Me */}
+        <div className="flex flex-col items-center gap-10">
+          <div className="relative p-1 rounded-3xl bg-white/5 backdrop-blur-md border border-white/10 shadow-2xl">
+            <Image src="/profile.png" alt="Profile" width={420} height={420} className="rounded-2xl" priority />
+          </div>
+          
+          <div className="relative group">
+            <div className="absolute -inset-3.75 bg-linear-to-tr from-[#00FFFF] to-[#FF00FF] opacity-20 blur-3xl rounded-full"></div>
+            <Image src="/logo.png" alt="Logo" height={200} width={200} className="relative rounded-full border border-white/5 backdrop-blur-xl" />
+          </div>
+        </div>
+
+        {/* Right Column: Typography */}
+        <div className="text-white">
+          <h1 className="text-5xl md:text-[85px] font-black leading-[1.1] tracking-tighter">
+            Turning Vision <br/> Into Reality With <br/>
+            <span className="text-[#00FFFF] drop-shadow-[0_0_20px_rgba(0,255,255,0.6)]">Code</span> And{" "}
+            <span className="text-[#FF00FF] drop-shadow-[0_0_20px_rgba(255,0,255,0.6)]">Design</span>.
+          </h1>
+
+          <p className="mt-8 text-gray-400 text-lg md:text-xl max-w-xl font-medium">
+            As a skilled web developer, I am dedicated to turning ideas into innovative web applications.
+          </p>
+
+          <div className="mt-12 flex gap-6">
+            <a href="/resume.pdf" className="px-10 py-4 bg-white text-black rounded-full font-bold text-lg hover:bg-cyan-400 transition-all">Resume ↗</a>
+            <a href="/contact" className="px-12 py-4 rounded-full font-bold text-xl bg-linear-to-r from-[#FF00FF] to-[#00FFFF] text-white hover:scale-105 transition-all">Contact</a>
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+}

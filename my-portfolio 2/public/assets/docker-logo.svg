@@ -1,0 +1,13 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#071420" stroke="#2496ED" stroke-width="2.5"/>
+  <!-- Container boxes grid -->
+  <rect x="13" y="27" width="8" height="8" rx="1.5" fill="#2496ED"/>
+  <rect x="23" y="27" width="8" height="8" rx="1.5" fill="#2496ED"/>
+  <rect x="33" y="27" width="8" height="8" rx="1.5" fill="#2496ED"/>
+  <rect x="23" y="17" width="8" height="8" rx="1.5" fill="#2496ED"/>
+  <rect x="33" y="17" width="8" height="8" rx="1.5" fill="#2496ED"/>
+  <!-- Whale body -->
+  <path d="M10 40 Q18 46 32 44 Q46 42 54 38 Q56 34 50 34 Q48 28 44 27.5 L44 37 L10 37 Q8 38 10 40Z" fill="#2496ED" opacity="0.7"/>
+  <!-- Tail spout -->
+  <path d="M48 34 Q53 30 56 38" stroke="#2496ED" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+</svg>

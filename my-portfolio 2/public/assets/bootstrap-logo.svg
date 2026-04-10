@@ -1,0 +1,7 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#200840" stroke="#7C3AED" stroke-width="2.5"/>
+  <!-- Bold B lettermark -->
+  <rect x="17" y="14" width="6" height="36" rx="3" fill="#7C3AED"/>
+  <path d="M23 14 L34 14 Q42 14 42 23 Q42 31 23 31 Z" fill="#7C3AED"/>
+  <path d="M23 31 L35 31 Q44 31 44 40 Q44 50 23 50 Z" fill="#A855F7"/>
+</svg>

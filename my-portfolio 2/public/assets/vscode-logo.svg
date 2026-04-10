@@ -1,0 +1,10 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#071526" stroke="#0078D4" stroke-width="2.5"/>
+  <!-- VS Code logo shape: overlapping arrows/chevrons -->
+  <!-- Left half (darker) -->
+  <path d="M12 20 L28 32 L12 44 L8 40 L20 32 L8 24 Z" fill="#0078D4"/>
+  <!-- Right chevron -->
+  <path d="M30 14 L52 30 L52 34 L30 50 L22 46 L42 32 L22 18 Z" fill="#0078D4"/>
+  <!-- White highlight cut -->
+  <path d="M30 14 L52 30 L52 26 L36 16 Z" fill="#28A8E8" opacity="0.7"/>
+</svg>

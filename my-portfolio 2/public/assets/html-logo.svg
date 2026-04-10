@@ -1,0 +1,15 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#1A0800" stroke="#E44D26" stroke-width="2.5"/>
+  <!-- HTML5 shield -->
+  <path d="M15 11L18 47L32 51L46 47L49 11Z" fill="#E44D26"/>
+  <path d="M32 48.5L44 45.5L46.5 14L32 14Z" fill="#F16529"/>
+  <!-- Top bar -->
+  <path d="M23 19L24 24L32 24L32 19Z" fill="white"/>
+  <path d="M32 19L32 24L40 24L41 19Z" fill="#EAD8C8"/>
+  <!-- Middle section -->
+  <path d="M24.5 28L25 33L32 33L32 28Z" fill="white"/>
+  <path d="M32 28L32 33L39 33L39.5 28Z" fill="#EAD8C8"/>
+  <!-- Bottom with numbers -->
+  <path d="M25 37L25.6 43L32 45L32 37Z" fill="white"/>
+  <path d="M32 37L32 45L38.4 43L39 37Z" fill="#EAD8C8"/>
+</svg>

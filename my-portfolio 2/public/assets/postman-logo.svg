@@ -1,0 +1,7 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#2B0A00" stroke="#FF6C37" stroke-width="2.5"/>
+  <!-- Send / paper-plane icon -->
+  <path d="M10 32 L54 14 L38 54 L30 38 Z" fill="#FF6C37"/>
+  <path d="M10 32 L30 38 L28 46" stroke="#FF6C37" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M30 38 L54 14" stroke="#FFB89A" stroke-width="1.5" fill="none" opacity="0.6"/>
+</svg>

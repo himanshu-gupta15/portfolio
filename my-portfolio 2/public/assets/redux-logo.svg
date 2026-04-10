@@ -1,0 +1,14 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="4" y="4" width="56" height="56" rx="14" fill="#1A0D33" stroke="#764ABC" stroke-width="2.5"/>
+  <!-- Top arc with arrowhead -->
+  <path d="M32 13 A19 19 0 0 1 47 26.5" stroke="#764ABC" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <polygon points="47,22 50,29 43,28" fill="#764ABC"/>
+  <!-- Bottom-left arc with arrowhead -->
+  <path d="M47 30 A19 19 0 0 1 22 46" stroke="#764ABC" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <polygon points="25,48 18,47 21,41" fill="#764ABC"/>
+  <!-- Left arc with arrowhead -->
+  <path d="M18 44 A19 19 0 0 1 17 26.5" stroke="#764ABC" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <polygon points="20,30 17,22 13,27" fill="#764ABC"/>
+  <!-- Center atom dot -->
+  <circle cx="32" cy="32" r="4.5" fill="#764ABC"/>
+</svg>
