@@ -2,13 +2,31 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { Github, ExternalLink, Play } from "lucide-react";
-import { projects } from "../data/projects";// Adjust path as needed
-import ElectricBorder from "@/component/ElectricBorder";
+import { projects } from "../data/projects";
 import Galaxy from "@/component/Galaxy";
 import ThreeScene from "@/component/ThreeScene";
 
 export default function Projects() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
   return (
     <section id="projects" className="relative mx-auto px-6 py-24 bg-black text-white overflow-hidden">
       <ThreeScene />
@@ -27,106 +45,155 @@ export default function Projects() {
 
       <div className="absolute inset-0 z-2 bg-[radial-gradient(circle_at_center,transparent_10%,#0a0a0a_95%)] pointer-events-none" />
 
-      <div className="relative z-10">
-      {/* Header - Matching About/Contact Style */}
-      <div className="text-center mb-20">
-        <h2 className="text-5xl md:text-7xl font-extrabold inline-block relative">
-          Latest <span className="text-[#00FFFF]">Projects</span>
-          <span className="absolute -bottom-2 right-0 w-24 h-8 bg-[#FF00FF] rounded-full blur-3xl opacity-30"></span>
-        </h2>
-        <p className="mt-6 text-gray-400 text-lg max-w-2xl mx-auto">
-          A showcase of my recent work in web development and intelligent systems, 
-          bridging the gap between complex code and intuitive design.
-        </p>
-      </div>
+      <div className="relative z-10 max-w-7xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-24">
+          <p className="text-[#00ff9c] text-sm uppercase tracking-widest font-bold mb-4">PROJECTS</p>
+          <h2 className="text-5xl md:text-7xl font-extrabold mb-6">
+            Featured <span className="text-[#00ffff]">Projects</span>
+          </h2>
+        </div>
 
-      {/* Projects Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        {projects.map((project) => (
-          <motion.div
-            key={project.id}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="group relative"
-          >
-            <ElectricBorder
-              color={["#00ff9c", "#ff4fd8"]}
-              speed={1}
-              chaos={0.12}
-              thickness={2}
-              style={{ borderRadius: 10 }}
+        {/* Timeline Projects */}
+        <motion.div
+          className="relative"
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+        >
+          {/* Central Timeline Line */}
+          <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-linear-to-b from-transparent via-[#00ff9c] to-transparent transform -translate-x-1/2 hidden md:block" />
+
+          {projects.slice(0, 3).map((project, index) => (
+            <motion.div
+              key={project.id}
+              variants={itemVariants}
+              className={`mb-20 md:mb-32 flex flex-col ${
+                index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+              } gap-8 md:gap-12 items-center relative`}
             >
-              <div className="bg-[#0a0a0a] rounded-xl overflow-hidden shadow-2xl">
-                {/* Project Image/Video Container */}
-                <div className="relative h-64 w-full overflow-hidden">
+              {/* Timeline Dot */}
+              <div className="absolute left-1/2 top-20 md:top-24 w-4 h-4 bg-[#00ff9c] rounded-full transform -translate-x-1/2 border-4 border-black shadow-lg shadow-[#00ff9c]/50 hidden md:block" />
+
+              {/* Project Number - Desktop */}
+              <div className="hidden md:flex absolute left-1/2 top-0 transform -translate-x-1/2 -translate-y-8">
+                <span className="text-4xl md:text-5xl font-bold text-gray-800">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+              </div>
+
+              {/* Image Section */}
+              <motion.div
+                className="w-full md:w-1/2"
+                whileHover={{ scale: 1.02 }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="relative group rounded-2xl overflow-hidden shadow-2xl">
                   <Image
                     src={project.image}
                     alt={project.title}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0"
+                    width={500}
+                    height={350}
+                    className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   
-                  {/* Hover Overlay for Video/Live Link */}
-                  <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-6">
-                    {project.video && (
-                      <Link href={project.video} className="p-4 bg-white/10 backdrop-blur-md rounded-full hover:bg-[#FF00FF] transition-colors">
-                        <Play className="w-6 h-6 text-white fill-white" />
+                  {/* Hover Overlay */}
+                  <div className="absolute inset-0 bg-linear-to-br from-black/40 via-black/50 to-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-6">
+                    {project.live && (
+                      <Link
+                        href={project.live}
+                        target="_blank"
+                        className="px-6 py-3 bg-white text-black font-bold rounded-lg hover:bg-[#00ff9c] transition-all transform hover:scale-105"
+                      >
+                        View Live
                       </Link>
                     )}
-                    <Link href={project.live} target="_blank" className="p-4 bg-white/10 backdrop-blur-md rounded-full hover:bg-[#00FFFF] transition-colors">
-                      <ExternalLink className="w-6 h-6 text-white" />
-                    </Link>
+                    {project.github && (
+                      <Link
+                        href={project.github}
+                        target="_blank"
+                        className="px-6 py-3 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-black transition-all transform hover:scale-105"
+                      >
+                        Source Code
+                      </Link>
+                    )}
                   </div>
                 </div>
+              </motion.div>
 
-                {/* Project Details */}
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold mb-3 group-hover:text-[#00FFFF] transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-400 text-sm mb-6 leading-relaxed">
-                    {project.description}
-                  </p>
+              {/* Content Section */}
+              <div className="w-full md:w-1/2 flex flex-col justify-center">
+                {/* Mobile Project Number */}
+                <div className="md:hidden mb-4">
+                  <span className="text-3xl font-bold text-[#00ff9c]">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                </div>
 
-                  {/* Tech Stack Tags */}
-                  <div className="flex flex-wrap gap-2 mb-8">
-                    {project.tech.map((t) => (
-                      <span 
-                        key={t}
-                        className="px-3 py-1 text-[10px] font-bold uppercase tracking-widest border border-gray-800 rounded-full text-gray-500 group-hover:border-[#FF00FF]/30 group-hover:text-white transition-all"
-                      >
-                        {t}
-                      </span>
-                    ))}
-                  </div>
+                <h3 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+                  {project.title}
+                </h3>
 
-                  {/* Links */}
-                  <div className="flex justify-between items-center pt-4 border-t border-gray-900">
-                    <Link 
-                      href={project.github} 
-                      target="_blank"
-                      className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
+                <p className="text-gray-400 text-base md:text-lg leading-relaxed mb-6">
+                  {project.description}
+                </p>
+
+                {/* Tech Stack */}
+                <div className="flex flex-wrap gap-2 mb-8">
+                  {project.tech.map((tech) => (
+                    <span
+                      key={tech}
+                      className="px-4 py-2 text-sm font-semibold text-white bg-gray-900/50 border border-gray-700 rounded-lg hover:border-[#00ff9c] hover:text-[#00ff9c] transition-all duration-300"
                     >
-                      <Github className="w-5 h-5" />
-                      <span className="text-sm font-medium">Source Code</span>
-                    </Link>
-                    
-                    <Link 
-                      href={project.live} 
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                {/* Mobile Buttons */}
+                <div className="md:hidden flex gap-4">
+                  {project.live && (
+                    <Link
+                      href={project.live}
                       target="_blank"
-                      className="text-[#FF00FF] font-bold text-sm hover:underline underline-offset-4"
+                      className="flex-1 px-6 py-3 bg-white text-black font-bold rounded-lg hover:bg-[#00ff9c] transition-all text-center"
                     >
-                      View Live ↗
+                      View Live
                     </Link>
-                  </div>
+                  )}
+                  {project.github && (
+                    <Link
+                      href={project.github}
+                      target="_blank"
+                      className="flex-1 px-6 py-3 bg-transparent border-2 border-white text-white font-bold rounded-lg hover:bg-white hover:text-black transition-all text-center"
+                    >
+                      Source Code
+                    </Link>
+                  )}
                 </div>
               </div>
-            </ElectricBorder>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* View All Projects Link */}
+        {projects.length > 3 && (
+          <motion.div
+            className="text-center mt-20"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            <Link
+              href="#"
+              className="inline-block px-8 py-4 border-2 border-[#00ff9c] text-[#00ff9c] font-bold rounded-lg hover:bg-[#00ff9c] hover:text-black transition-all duration-300 transform hover:scale-105"
+            >
+              View All Projects →
+            </Link>
           </motion.div>
-        ))}
-      </div>
+        )}
       </div>
     </section>
   );
