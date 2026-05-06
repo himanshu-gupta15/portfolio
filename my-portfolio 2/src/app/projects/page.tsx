@@ -7,26 +7,6 @@ import Galaxy from "@/component/Galaxy";
 import ThreeScene from "@/component/ThreeScene";
 
 export default function Projects() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
-  };
-
   return (
     <section id="projects" className="relative mx-auto px-6 py-24 bg-black text-white overflow-hidden">
       <ThreeScene />
@@ -57,9 +37,9 @@ export default function Projects() {
         {/* Timeline Projects */}
         <motion.div
           className="relative"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ staggerChildren: 0.2, delayChildren: 0.3 }}
           viewport={{ once: true }}
         >
           {/* Central Timeline Line */}
@@ -68,7 +48,10 @@ export default function Projects() {
           {projects.slice(0, 3).map((project, index) => (
             <motion.div
               key={project.id}
-              variants={itemVariants}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+              viewport={{ once: true }}
               className={`mb-20 md:mb-32 flex flex-col ${
                 index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
               } gap-8 md:gap-12 items-center relative`}
