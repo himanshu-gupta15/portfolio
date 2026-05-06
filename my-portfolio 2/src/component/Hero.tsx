@@ -131,7 +131,7 @@ export default function Hero() {
 
           <div className="mt-12 flex gap-6">
             <a href="/resume.pdf" className="px-10 py-4 bg-white text-black rounded-full font-bold text-lg hover:bg-cyan-400 transition-all">Resume ↗</a>
-            <a href="/contact" className="px-12 py-4 rounded-full font-bold text-xl bg-linear-to-r from-[#FF00FF] to-[#00FFFF] text-white hover:scale-105 transition-all">Contact</a>
+            <a href="/#contact" className="px-12 py-4 rounded-full font-bold text-xl bg-linear-to-r from-[#FF00FF] to-[#00FFFF] text-white hover:scale-105 transition-all">Contact</a>
           </div>
         </div>
       </section>

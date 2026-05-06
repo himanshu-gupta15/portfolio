@@ -1,6 +1,7 @@
 import Hero from "@/component/Hero";
 import About from "./about/page";
 import Skills from "./skills/page";
+import CodingProfileSection from "@/component/CodingProfileSection";
 import Projects from "./projects/page";
 import Contact from "./contact/page";
 
@@ -18,6 +19,8 @@ export default function Page() {
       <section id="skills" className="scroll-mt-28">
         <Skills />
       </section>
+
+      <CodingProfileSection />
 
       <section id="projects" className="scroll-mt-28">
         <Projects />

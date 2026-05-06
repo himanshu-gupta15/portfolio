@@ -38,6 +38,13 @@ export default function Navbar() {
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#00FFFF] transition-all duration-300 group-hover:w-full"></span>
           </Link>
 
+          <Link href="/#coding-profile" className="group relative">
+            <span className="text-gray-300 text-lg font-bold uppercase tracking-widest hover:text-[#FF00FF] transition-colors duration-300">
+              Coding Profile
+            </span>
+            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-[#FF00FF] transition-all duration-300 group-hover:w-full"></span>
+          </Link>
+
           <Link href="/#projects" className="group relative">
             <span className="text-gray-300 text-lg font-bold uppercase tracking-widest hover:text-[#FF00FF] transition-colors duration-300">
               Projects
