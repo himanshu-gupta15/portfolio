@@ -19,8 +19,18 @@ Integrated Razorpay payments, secure authentication, and role-based access contr
      image: "/project/LMS/image.png",
     video: "/projects/delivery.mp4",
     tech: ["MongoDB", "Express", "React", "Node.js", "Socket.io"],
-    github: "https://github.com/himanshu-gupta15/delivery-app",
-    live: "https://delivery-demo.com"
-  }
+    github: "https://github.com/himanshu-gupta15/tech.git",
+    live: "https://snapcart-sigma.vercel.app/"
+  },
+{
+  id: 3,
+  title: "ExamNotes AI",
+  description: `Developed an advanced AI-powered platform for generating exam-oriented notes using the Gemini API for intelligent content synthesis. 
+Integrated Firebase for real-time data handling and secure file storage, alongside a MERN stack architecture to provide a seamless, scalable user experience for revision.`,
+  image: "/project/ExamNotes/img.png",
+  tech: ["MongoDB", "Express", "React", "Node.js", "Firebase", "Gemini AI"],
+   github: "https://github.com/himanshu-gupta15/notesgenerator.git",
+  live: "https://notesgenerator-ai.netlify.app"
+}
   
 ];
