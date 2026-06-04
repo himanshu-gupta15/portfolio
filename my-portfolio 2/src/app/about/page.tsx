@@ -1,8 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
-import Galaxy from "@/component/Galaxy";
-import ThreeScene from "@/component/ThreeScene";
 import AboutDeskEmbed from "@/component/AboutDeskEmbed";
 
 // Reusable Counter Component
@@ -32,26 +30,8 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="relative mx-auto px-6 py-24 bg-[#0a0a0a] text-white overflow-hidden">
+    <section id="about" className="relative mx-auto px-6 py-24 bg-transparent text-white overflow-hidden">
       
-      {/* --- BACKGROUND LAYERS: Match Home --- */}
-      <ThreeScene />
-      
-      {/* Galaxy Stars Layer */}
-      <div className="absolute inset-0 z-1 pointer-events-none">
-        <Galaxy
-          numStars={760}
-          numTwinkles={170}
-          speed={4.2}
-          trailAlpha={0.24}
-          twinkleSpeed={0.012}
-          colors={["#ffffff", "#8be9fd", "#00ffff", "#ff7be5", "#b79cff"]}
-          className="opacity-75"
-        />
-      </div>
-
-      {/* Atmospheric Vignette (Same as Hero) */}
-      <div className="absolute inset-0 z-2 bg-[radial-gradient(circle_at_center,transparent_10%,#0a0a0a_95%)] pointer-events-none" />
 
       {/* --- ORIGINAL UI CONTENT --- */}
       <div className="relative z-10">

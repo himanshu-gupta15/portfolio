@@ -35,7 +35,6 @@ export default function ThreeScene() {
   return (
     <div className="pointer-events-none absolute inset-0 z-0">
       <Canvas camera={{ position: [0, 0, 5], fov: 60 }}>
-        <color attach="background" args={["#05050a"]} />
         <fog attach="fog" args={["#05050a", 6, 14]} />
 
         <ambientLight intensity={0.2} />
@@ -47,7 +46,7 @@ export default function ThreeScene() {
         <Sparkles count={120} scale={12} size={2} speed={0.35} color="#ffffff" />
       </Canvas>
 
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_0%,#05050a_75%)]" />
+
     </div>
   );
 }

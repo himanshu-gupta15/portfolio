@@ -4,10 +4,12 @@ import Skills from "./skills/page";
 import CodingProfileSection from "@/component/CodingProfileSection";
 import Projects from "./projects/page";
 import Contact from "./contact/page";
+import AnimatedBackground from "@/component/AnimatedBackground";
 
 export default function Page() {
   return (
-    <main>
+    <main className="relative min-h-screen">
+      <AnimatedBackground />
       <section id="home" className="scroll-mt-28">
         <Hero />
       </section>

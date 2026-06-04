@@ -33,13 +33,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        
-      >
-        <Navbar/>
+      <body className="bg-[#050816] text-white antialiased">
+        <Navbar />
         {children}
-        <Footer/>
-        
+        <Footer />
       </body>
     </html>
   );

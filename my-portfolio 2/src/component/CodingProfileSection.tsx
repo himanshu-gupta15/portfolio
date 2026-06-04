@@ -54,7 +54,7 @@ export default async function CodingProfileSection() {
   ];
 
   return (
-    <section id="coding-profile" className="relative mx-auto overflow-hidden bg-[#06070b] px-6 py-24 text-white scroll-mt-28">
+    <section id="coding-profile" className="relative mx-auto overflow-hidden bg-transparent px-6 py-24 text-white scroll-mt-28">
       <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_top,#00ffff1a,transparent_35%),radial-gradient(circle_at_bottom_right,#ff00ff1a,transparent_35%)]" />
 
       <div className="relative z-10 mx-auto max-w-7xl">

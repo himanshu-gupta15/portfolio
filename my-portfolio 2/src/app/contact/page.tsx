@@ -3,11 +3,6 @@
 import { useState, useRef, Suspense } from "react";
 import emailjs from "@emailjs/browser";
 import { Canvas } from "@react-three/fiber";
-import ThreeScene from "@/component/ThreeScene";
-import Galaxy from "@/component/Galaxy";
-
-// Import your Fox component
-// Note: Ensure the export name in Fox.tsx matches (it was 'export function Fox')
 import { Fox } from "@/models/Fox";
 
 export default function Contact() {
@@ -78,19 +73,7 @@ export default function Contact() {
         </div>
       )}
 
-      <section id="contact" className="relative mx-auto px-6 py-24 bg-black text-white min-h-screen overflow-hidden">
-        <ThreeScene />
-        <Galaxy
-          numStars={760}
-          numTwinkles={170}
-          speed={4.2}
-          trailAlpha={0.24}
-          twinkleSpeed={0.012}
-          colors={["#ffffff", "#8be9fd", "#00ffff", "#ff7be5", "#b79cff"]}
-          className="opacity-75"
-        />
-        <div className="absolute inset-0 z-2 bg-[radial-gradient(circle_at_center,transparent_10%,#0a0a0a_95%)] pointer-events-none" />
-
+      <section id="contact" className="relative mx-auto px-6 py-24 bg-transparent text-white min-h-screen overflow-hidden">
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
           
           {/* Form Side */}

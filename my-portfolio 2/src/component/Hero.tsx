@@ -78,31 +78,10 @@
 
 "use client";
 import Image from "next/image";
-import ThreeScene from "./ThreeScene";
-import Galaxy from "./Galaxy";
 
 export default function Hero() {
   return (
-    <div className="bg-[#0a0a0a] min-h-screen w-full flex items-center relative overflow-hidden">
-      
-      {/* 1. 3D MODEL BACKGROUND */}
-      <ThreeScene />
-
-      {/* 1.5 GALAXY ANIMATION */}
-      <Galaxy
-        numStars={760}
-        numTwinkles={170}
-        speed={4.2}
-        trailAlpha={0.24}
-        twinkleSpeed={0.012}
-        colors={["#ffffff", "#8be9fd", "#00ffff", "#ff7be5", "#b79cff"]}
-        className="opacity-75"
-      />
-
-      {/* 2. ATMOSPHERIC OVERLAY */}
-      <div className="absolute inset-0 z-2 bg-[radial-gradient(circle_at_center,transparent_10%,#0a0a0a_95%)] pointer-events-none" />
-
-      {/* 3. HERO CONTENT */}
+    <div className="min-h-screen w-full flex items-center relative overflow-hidden bg-transparent">
       <section className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 px-6 py-20 items-center">
         
         {/* Left Column: Profile & Hire Me */}
