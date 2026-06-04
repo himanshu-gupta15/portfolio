@@ -94,7 +94,7 @@ function SphereNodes() {
 
 export default function TechStackSphere() {
   return (
-    <div className="h-120 w-full overflow-hidden rounded-3xl border border-cyan-400/20 bg-[#05070f]">
+    <div className="h-[300px] lg:h-[480px] w-full overflow-hidden rounded-3xl border border-cyan-400/20 bg-[#05070f]">
       <Canvas camera={{ position: [0, 0, 7], fov: 52 }}>
         <ambientLight intensity={0.5} />
         <pointLight position={[3, 3, 4]} intensity={18} color="#00ffff" />

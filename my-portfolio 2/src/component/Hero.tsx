@@ -97,20 +97,20 @@ export default function Hero() {
         </div>
 
         {/* Right Column: Typography */}
-        <div className="text-white">
+        <div className="text-white text-center md:text-left mt-8 md:mt-0">
           <h1 className="text-5xl md:text-[85px] font-black leading-[1.1] tracking-tighter">
-            Turning Vision <br/> Into Reality With <br/>
+            Turning Vision <br className="hidden md:block"/> Into Reality With <br className="hidden md:block"/>
             <span className="text-[#00FFFF] drop-shadow-[0_0_20px_rgba(0,255,255,0.6)]">Code</span> And{" "}
             <span className="text-[#FF00FF] drop-shadow-[0_0_20px_rgba(255,0,255,0.6)]">Design</span>.
           </h1>
 
-          <p className="mt-8 text-gray-400 text-lg md:text-xl max-w-xl font-medium">
+          <p className="mt-6 md:mt-8 text-gray-400 text-lg md:text-xl max-w-xl mx-auto md:mx-0 font-medium">
             As a skilled web developer, I am dedicated to turning ideas into innovative web applications.
           </p>
 
-          <div className="mt-12 flex gap-6">
-            <a href="/resume.pdf" className="px-10 py-4 bg-white text-black rounded-full font-bold text-lg hover:bg-cyan-400 transition-all">Resume ↗</a>
-            <a href="/#contact" className="px-12 py-4 rounded-full font-bold text-xl bg-linear-to-r from-[#FF00FF] to-[#00FFFF] text-white hover:scale-105 transition-all">Contact</a>
+          <div className="mt-10 md:mt-12 flex flex-col sm:flex-row gap-6 justify-center md:justify-start">
+            <a href="/resume.pdf" className="px-10 py-4 bg-white text-black rounded-full font-bold text-lg hover:bg-cyan-400 transition-all text-center">Resume ↗</a>
+            <a href="/#contact" className="px-12 py-4 rounded-full font-bold text-xl bg-linear-to-r from-[#FF00FF] to-[#00FFFF] text-white hover:scale-105 transition-all text-center">Contact</a>
           </div>
         </div>
       </section>

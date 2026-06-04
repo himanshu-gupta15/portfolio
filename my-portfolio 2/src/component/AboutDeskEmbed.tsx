@@ -2,10 +2,10 @@
 
 export default function AboutDeskEmbed() {
   return (
-    <div className="relative h-160 w-full overflow-hidden bg-[#070b14]">
+    <div className="relative h-[400px] lg:h-[600px] w-full overflow-hidden bg-transparent rounded-3xl flex justify-center">
       <iframe
         title="Gaming Setup"
-        className="absolute -left-16 -top-12 h-[calc(100%+7rem)] w-[calc(100%+8rem)]"
+        className="absolute -top-14 h-[calc(100%+7rem)] w-full max-w-none"
         frameBorder="0"
         allowFullScreen
         allow="autoplay; fullscreen; xr-spatial-tracking"

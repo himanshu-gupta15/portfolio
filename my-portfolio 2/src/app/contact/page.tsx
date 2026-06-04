@@ -131,7 +131,7 @@ export default function Contact() {
           </form>
 
           {/* 3D Model Side */}
-          <div className="relative z-10 lg:h-150 h-87.5 w-full">
+          <div className="relative z-10 lg:h-[600px] h-[350px] w-full mt-10 lg:mt-0">
             <Canvas
               camera={{
                 position: [0, 0, 5],
