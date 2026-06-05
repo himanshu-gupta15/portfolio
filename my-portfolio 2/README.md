@@ -3,7 +3,7 @@
 Welcome to the repository for my personal portfolio! This website is a modern, highly interactive, and visually striking web application built to showcase my skills, projects, and coding profiles. It heavily utilizes 3D elements, smooth animations, and a responsive glassmorphism design.
 
 ## 🚀 Live Demo
-*(You can add your live deployment URL here)*
+(https://portfoliohimanshugupta.netlify.app/)
 
 ---
 
