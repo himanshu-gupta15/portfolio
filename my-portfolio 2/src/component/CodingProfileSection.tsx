@@ -27,8 +27,8 @@ export default async function CodingProfileSection() {
     },
     {
       name: "CodeChef",
-      handle: "imanshu8083",
-      href: "https://www.codechef.com/users/imanshu8083",
+      handle: "himanshugpt80",
+      href: "https://www.codechef.com/users/himanshugpt80",
       accent: "from-[#FF00FF]/20 to-[#FF00FF]/5",
       border: "border-[#FF00FF]/20",
       text: "text-[#FF00FF]",
