@@ -2,9 +2,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { projects } from "../data/projects";
 
 export default function Projects() {
+  const [showAllProjects, setShowAllProjects] = useState(false);
+  const visibleProjects = showAllProjects ? projects : projects.slice(0, 3);
+
   return (
     <section id="projects" className="relative mx-auto px-6 py-24 bg-transparent text-white overflow-hidden">
 
@@ -28,7 +32,7 @@ export default function Projects() {
           {/* Central Timeline Line */}
           <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-linear-to-b from-transparent via-[#00ff9c] to-transparent transform -translate-x-1/2 hidden md:block" />
 
-          {projects.slice(0, 3).map((project, index) => (
+          {visibleProjects.map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 20 }}
@@ -143,7 +147,7 @@ export default function Projects() {
           ))}
         </motion.div>
 
-        {/* View All Projects Link */}
+        {/* View All Projects Button */}
         {projects.length > 3 && (
           <motion.div
             className="text-center mt-20"
@@ -152,12 +156,13 @@ export default function Projects() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <Link
-              href="#"
+            <button
+              type="button"
+              onClick={() => setShowAllProjects((current) => !current)}
               className="inline-block px-8 py-4 border-2 border-[#00ff9c] text-[#00ff9c] font-bold rounded-lg hover:bg-[#00ff9c] hover:text-black transition-all duration-300 transform hover:scale-105"
             >
-              View All Projects →
-            </Link>
+              {showAllProjects ? "Show Less" : "More"}
+            </button>
           </motion.div>
         )}
       </div>
