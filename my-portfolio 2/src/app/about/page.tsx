@@ -2,6 +2,7 @@
 import { useEffect, useRef } from "react";
 import { motion, useMotionValue, useTransform, animate, useInView } from "framer-motion";
 import AboutDeskEmbed from "@/component/AboutDeskEmbed";
+import { projects } from "../data/projects";
 
 // Reusable Counter Component
 function Counter({ targetValue }: { targetValue: number }) {
@@ -98,7 +99,7 @@ export default function About() {
           </div>
           <div className="text-center border-x border-[#1a1a1a] group">
             <span className="block text-5xl font-extrabold text-white group-hover:scale-110 transition-transform">
-              <Counter targetValue={5} />+
+              <Counter targetValue={projects.length} />+
             </span>
             <span className="text-gray-500 uppercase tracking-widest text-sm mt-2 block">Projects</span>
           </div>
