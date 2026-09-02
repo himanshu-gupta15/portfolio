@@ -43,8 +43,8 @@ The portfolio is designed as a single-page scrolling experience, with distinct s
 - **Right/Bottom Pane**: Categorized skill chips (Frontend, Backend, Databases, etc.) with hover glow effects.
 
 ### 5. Coding Profiles (`src/component/CodingProfileSection.tsx`)
-- A grid layout displaying live, dynamic statistics from platforms like LeetCode, CodeChef, and GeeksforGeeks.
-- Uses server-side or static data fetching to pull recent problem-solving counts.
+- A grid layout displaying statistics from platforms like LeetCode, CodeChef, GeeksforGeeks, and Codolio.
+- Uses server-side and static data fetching to pull problem-solving counts, contest numbers, and profile handles.
 
 ### 6. Projects Section (`src/app/projects/page.tsx`)
 - A vertical timeline layout showcasing featured projects.

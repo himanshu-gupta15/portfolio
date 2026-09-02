@@ -3,6 +3,36 @@
 export const projects = [
   {
     id: 1,
+    title: "MultiMind",
+    description: `Architected a distributed multi-agent AI platform using LangGraph, LangChain, and 5 microservices, orchestrating 8+ autonomous agents for code synthesis, web search, RAG, and document workflows.
+Engineered an LLM orchestration pipeline with conditional LangGraph graphs, intent classifiers, and Gemini/Groq model fallback, ensuring high fault tolerance and response accuracy.
+Built an end-to-end RAG pipeline leveraging recursive semantic chunking, Google text-embedding-004, and Qdrant vector database for fast, document-grounded question answering.
+Designed resilient backend infrastructure featuring an API Gateway, Firebase OAuth, Redis-backed sliding-window rate limiting, and rolling conversational memory over 20+ dialogue turns.
+Automated CI/CD deployment for 5 services using Docker, AWS ECR, ECS, S3, CloudFront, and GitHub Actions; integrated Razorpay with HMAC-SHA256 signature verification.`,
+    image: "/project/MultiMind/img.png",
+    tech: [
+      "React 19",
+      "Node.js",
+      "Express.js",
+      "LangGraph",
+      "LangChain",
+      "Generative AI",
+      "RAG",
+      "Google Gemini",
+      "Groq",
+      "MongoDB",
+      "Redis",
+      "Qdrant",
+      "Docker",
+      "AWS ECS",
+      "AWS S3",
+      "CloudFront"
+    ],
+    github: "https://github.com/himanshu-gupta15/MultiMind",
+    live: "https://d2pplrl0246irj.cloudfront.net/"
+  },
+  {
+    id: 2,
     title: "SnapClass",
     description: `Developed SnapClass, an AI-powered multimodal attendance system utilizing Face ID and Voice Verification.
 Built high-performance biometric pipelines incorporating face recognition (128D embeddings using dlib and SVM) and voice verification (256D d-vector embeddings using Resemblyzer and cosine similarity) with Euclidean distance and cosine similarity check thresholds.
@@ -13,7 +43,7 @@ Integrated a real-time Supabase PostgreSQL database for managing student enrollm
     live: "https://snapclassess.streamlit.app/"
   },
   {
-    id: 2,
+    id: 3,
     title: "CareerLaunch",
     description: `Built an event-driven AI-powered job portal with JWT authentication and role-based access control.
 Implemented Apache Kafka, Redis, and PostgreSQL for scalable asynchronous backend services.
@@ -24,7 +54,7 @@ Integrated Google Gemini AI for Resume Analyzer and Career Guide features, along
     live: "https://careerlunchaijobportal.netlify.app/"
   },
   {
-    id: 3,
+    id: 4,
     title: "ALGORISE",
     description: `Built a MERN-based competitive programming platform with coding problems, contests, leaderboards, and XP-based gamification.
 Implemented JWT authentication, role-based access control, problem submission, admin approval/rejection, and solution tracking.
@@ -35,7 +65,7 @@ Used MongoDB, Redis, Redux, React Router, and Tailwind CSS for scalable backend 
     live: "https://algoriseaicodingplatpractice.netlify.app/"
   },
   {
-    id: 4,
+    id: 5,
     title: "Snapcart ",
     description: `Developed a real-time delivery platform enabling order tracking, delivery assignment, and instant status updates using WebSockets.
 Implemented secure authentication with Google OAuth, role-based access control, and OTP-based delivery verification`,
@@ -45,7 +75,7 @@ Implemented secure authentication with Google OAuth, role-based access control, 
     live: "https://snapcart-sigma.vercel.app/"
   },
   {
-    id: 5,
+    id: 6,
     title: "Learning Management System",
     description: `Developed an AI-powered LMS with student/educator dashboards, enabling voice-based and natural language course search using LLMs.
 Integrated Razorpay payments, secure authentication, and role-based access control for scalable and secure course management.`,
@@ -56,7 +86,7 @@ Integrated Razorpay payments, secure authentication, and role-based access contr
     live: "https://snapcart-sigma.vercel.app/"
   },
   {
-    id: 6,
+    id: 7,
     title: "ExamNotes AI",
     description: `Developed an advanced AI-powered platform for generating exam-oriented notes using the Gemini API for intelligent content synthesis. 
 Integrated Firebase for real-time data handling and secure file storage, alongside a MERN stack architecture to provide a seamless, scalable user experience for revision.`,

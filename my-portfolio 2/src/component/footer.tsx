@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, ArrowUp } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowUp, Code2 } from "lucide-react";
 import Link from "next/link";
 
 export default function Footer() {
@@ -48,13 +48,16 @@ export default function Footer() {
 
         {/* Middle Section: Social Icons */}
         <div className="flex justify-center gap-6 mb-12">
-          <Link href="https://github.com/himanshu-gupta15" target="_blank" className="p-3 bg-gray-900 rounded-full hover:bg-white hover:text-black transition-all">
+          <Link href="https://github.com/himanshu-gupta15" target="_blank" rel="noreferrer" title="GitHub" className="p-3 bg-gray-900 rounded-full hover:bg-white hover:text-black transition-all">
             <Github className="w-6 h-6" />
           </Link>
-          <Link href="https://www.linkedin.com/in/himanshu-gupta-8624a728a/" target="_blank" className="p-3 bg-gray-900 rounded-full hover:bg-[#0077b5] hover:text-white transition-all">
+          <Link href="https://www.linkedin.com/in/himanshu-gupta-8624a728a/" target="_blank" rel="noreferrer" title="LinkedIn" className="p-3 bg-gray-900 rounded-full hover:bg-[#0077b5] hover:text-white transition-all">
             <Linkedin className="w-6 h-6" />
           </Link>
-          <Link href="mailto:himanshugpt0005@gmail.com" className="p-3 bg-gray-900 rounded-full hover:bg-[#FF00FF] hover:text-white transition-all">
+          <Link href="https://codolio.com/profile/himanshugpt" target="_blank" rel="noreferrer" title="Codolio Profile" className="p-3 bg-gray-900 rounded-full hover:bg-[#FF7A00] hover:text-black transition-all">
+            <Code2 className="w-6 h-6" />
+          </Link>
+          <Link href="mailto:himanshugpt0005@gmail.com" title="Email" className="p-3 bg-gray-900 rounded-full hover:bg-[#FF00FF] hover:text-white transition-all">
             <Mail className="w-6 h-6" />
           </Link>
         </div>
